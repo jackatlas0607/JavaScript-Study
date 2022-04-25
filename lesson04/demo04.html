@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作DOM元素</title>
+</head>
+
+<body>
+
+    <ul id="test-ul">
+        <li class="js">JavaScript</li>
+        <li name="python">Python</li>
+    </ul>
+
+
+
+
+    <script src="./lib/jquery-3.6.0.min.js"></script>
+    <script>
+        $('#test-ul li[name=python]').text();
+        $("#test-ul").html();
+        $('#test-ul li[name=python]').css("color", "red");
+        $('#test-ul li[name=python]').show();
+
+
+        $("#test-ul li[class=js]").hide();
+    </script>
+</body>
+
+</html>

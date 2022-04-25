@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Extend</title>
+
+    <script>
+        //ES6之後
+        //定義一個學生類
+        class Student {
+
+            constructor(name) {
+                this.name = name;
+            }
+
+            hello() {
+                console.log("I am " + this.name);
+            }
+        }
+
+        class Person extends Student {
+            constructor(name, age) {
+                super(name);  //需要調用父類構造方法，super調用 
+                this.age = age;
+            }
+
+            introduction() {
+                console.log("My name is " + this.name + " and age is " + this.age);
+            }
+        }
+
+        var origami = new Student("Origami");
+        var kurumi = new Person("Kurumi", 14);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

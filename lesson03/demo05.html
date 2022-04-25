@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作表單</title>
+</head>
+
+<body>
+
+    <form action="#" method="post">
+        <p>
+            <span>用戶名: </span><input type="text" id="username">
+        </p>
+
+
+        <!-- 多選框的值就是定義好的value  -->
+        <p>
+            <span>性別: </span>
+            <input type="radio" name="sex" value="man" id="boy"> 男
+            <!--傳到後端 sex = man-->
+            <input type="radio" name="sex" value="woman" id="girl" checked> 女
+            <!--傳到後端 sex = woman-->
+        </p>
+
+        <input type="submit">
+    </form>
+
+
+    <script>
+        var input_text = document.getElementById("username");
+
+        //修改輸入框的值
+        input_text.value = "Origami";
+
+        //得到輸入框的值 input_text.value
+        console.log(input_text.value);
+
+
+        var boy_radio = document.getElementById("boy");
+        var girl_radio = document.getElementById("girl");
+
+
+        //對於單選框，多選框等等固定的值，girl_radio.value只能取到當前的值
+        //girl_radio.checked; 查看返回的結果是否為true; true代表當前選中
+        console.log("是否選中女: " + girl_radio.checked);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+
+    <script>
+        var user = {
+            name: "Origami",
+            age: 14,
+            sex: "女"
+        }
+
+        //對象轉換為JSON字串
+        var jsonUser = JSON.stringify(user);  //{"name":"Origami","age":14,"sex":"女"}
+
+        //JSON字串轉換成js對象，參數為JSON字串
+        /*
+        在 JavaScript 中，String (字串) 使用單引號 ' '或 雙引號 " " 包住，
+        使用單引號與雙引號並無不同，但兩者不可混用。
+        要特別注意雙引號裡面不能有雙引號，單引號裡面不能有單引號
+        */
+        var jsUser = JSON.parse('{"name":"Origami","age":14,"sex":"女"}');  //{name: 'Origami', age: 14, sex: '女'}
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

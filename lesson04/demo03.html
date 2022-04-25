@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件</title>
+    <style>
+        #divMove {
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 要求: 獲取鼠標當前的座標 -->
+    mouse : <span id="mouseMove"></span>
+
+    <div id="divMove">
+        在這裡移動鼠標試試
+    </div>
+
+
+
+
+
+
+
+
+    <script src="./lib/jquery-3.6.0.min.js"></script>
+
+    <script>
+        //當網頁元素加仔完畢之後，響應事件
+        //document當前網頁加載文檔
+
+        /* 最開始的寫法，後來簡化
+        $(document).ready(function () {
+
+        })
+        */
+
+        //33~35行簡寫成這樣
+        //mousemove(function (e)  e為鼠標的座標，移動鼠標產生的座標及傳入該函數
+        $(function () {
+            $("#divMove").mousemove(function (e) {
+                //拿到滑鼠座標後執行這個
+                $("#mouseMove").text("x: " + e.pageX + " y: " + e.pageY)
+            })
+        })
+    </script>
+
+
+
+
+
+</body>
+
+</html>

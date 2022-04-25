@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>插入節點</title>
+</head>
+
+<body>
+    <p id="js">JavaScript</p>
+    <div id="list">
+        <p id="se">JavaSE</p>
+        <p id="ee">JavaEE</p>
+        <p id="me">JavaME</p>
+    </div>
+
+    <script>
+        var js = document.getElementById("js"); //已存在的節點
+        var list = document.getElementById("list");
+
+        //通過js創建一個新的節點
+        var newP = document.createElement("p");  //創建一個p標籤
+        //newP.setAttribute("id", "newP");
+        newP.id = "newP";
+        newP.innerText = "I am Kurumi!";
+        // 24~26行相當於 <p id="newP">I am Kurumi</p>
+        list.append(newP);
+
+        //創建一個標籤節點
+        var myScript = document.createElement("script");
+        myScript.setAttribute("type", "text/javascript");
+
+
+        var body = document.getElementsByTagName("body");
+        /*getElementsByTagName返回的是一個array
+        Retrieves a collection of objects based on the specified element name.
+        */
+        body[0].style.backgroundColor = "aqua";
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+
+    <script>
+        // 定義函數 方式一
+        function abs(x) {
+
+            //手動拋出Exception來判斷
+            if (typeof x !== "number") {
+                throw "Not a number";
+            }
+
+            if (x >= 0) {
+                return x;
+            } else {
+                return -x;
+            }
+        }
+
+        //定義函數 方式二
+        var absolute = function (x) {
+
+            console.log("x=> " + x);
+            for (let i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+            }
+
+            if (x >= 0) {
+                return x;
+            } else {
+                return -x;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

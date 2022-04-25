@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterator</title>
+</head>
+
+<script>
+    "use strict";
+    var arr = [20, 45, 64, 81, 96];
+    arr.name = "Kurumi";
+
+    for (var x in arr) {
+        console.log(x);  //打印出 0 1 2 3 4 name(array下標)
+    }
+
+    console.log("=========================");
+
+    for (var x of arr) {
+        console.log(x);  //打印出array元素
+    }
+
+    var map = new Map([["Origami", 100], ["Kurumi", 98], ["Yuzuru", 96]]);
+    for (var x of map) {
+        console.log(x);
+    }
+
+    console.log("=========================");
+
+    var set = new Set([6, 7, 8]);
+    for (let x of set) {
+        console.log(x);
+    }
+
+</script>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+
+<script>
+    var now = new Date();  //Mon Apr 25 2022 14:29:34 GMT+0800 (GMT+08:00)
+    var year = now.getFullYear(); //年
+    now.getMonth(); //月   0~11代表月
+    now.getDate(); //日
+    var day = now.getDay(); //星期幾
+    now.getHours(); //時
+    now.getMinutes(); //分
+    now.getSeconds(); //秒
+    now.getTime(); //時間戳，全世界統一 1970.1.1 00:00到現在的毫秒數
+
+    console.log(year);
+    console.log(day);
+
+    console.log("日期為: " + new Date(now.getTime()));  //日期為: Mon Apr 25 2022 14:39:42 GMT+0800 (GMT+08:00) 
+    console.log(now.toLocaleString());  //2022/4/25 下午2:38:19
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

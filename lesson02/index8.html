@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>變量的作用域</title>
+
+    <script>
+        "use strict";
+        function abc() {
+            var x = 1;
+
+            function abc2() {
+                var x = "A";
+                console.log("inner=> " + x);
+            }
+
+            console.log("outer=> " + x);
+            abc2();
+        }
+
+        abc();
+
+        console.log("================================");
+
+        function aaa() {
+
+            for (var i = 0; i < 10; i++) {
+                console.log(i);
+            }
+            console.log(i + 1);
+        }
+
+        function bbb() {
+
+            for (let i = 0; i < 10; i++) {
+                console.log(i);
+            }
+            console.log(i + 1);  //Uncaught ReferenceError: i is not defined
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

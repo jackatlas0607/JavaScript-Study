@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        console.log((1 / 3) == (1 - 2 / 3));  //盡量避免使用浮點數進行運算，存在精度問題
+        console.log(Math.abs(1 / 3 - (1 - 2 / 3)) < 0.0000000001);
+
+        //保證代碼可讀性，盡量使用[]
+        var array = [1, 2, 3, "hello", true, null];
+
+        new Array(1, 2, 3, "hello", true, null);
+
+        /*對象，物件 Object
+         Person person = new Person();
+        */
+        var person = {
+            name: "Kurumi",
+            age: 15,
+            tags: ["java", "python", "linux"]
+        };
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Set</title>
+</head>
+
+<script>
+    "use strict";
+    //ES6 Map
+    //學生的成績，學生的名字
+    // var names = [Kurumi, Origami, Yuzuru];
+    // var scores = [98, 100, 90];
+
+    var map = new Map([["Kurumi", 98], ["Origami", 100], ["Yuzuru", 90]]);
+    var score = map.get("Kurumi");  //通過key獲得value
+    console.log("Kurumi: " + score);
+    console.log(map.get("Origami"));
+
+    map.set("Kaguya", 96);
+    map.delete("Kaguya"); //刪除"Kaguya"這個key
+
+    console.log("==============================================");
+
+    var set = new Set([3, 1, 1, 1, 1]); //Set可以去重複
+    set.add(2);  //增加2到這個set
+    set.delete(2); //把2從這個set裡刪除
+    console.log("set 是否有3這個元素: " + set.has(3));
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

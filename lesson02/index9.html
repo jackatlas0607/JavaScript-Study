@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>方法</title>
+</head>
+
+<script>
+
+    function getAge() {
+        //今年-出生那年
+        var now = new Date().getFullYear();
+        return now - this.birth;
+    }
+
+
+
+    var Kurumi = {
+        name: "Kurumi",
+        birth: 2000,
+
+        //方法
+        age: getAge
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>
